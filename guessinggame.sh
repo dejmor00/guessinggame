@@ -2,6 +2,13 @@
 # File: guessinggame.sh
 
 
+# Function for reading input
+function readinput {
+    guess=0
+    echo "Your guess:"
+    read guess
+}
+
 # Check the number of files in the current directory
 counter=0
 let counter=$(ls -l | tail -n +2 | wc -l)
@@ -13,8 +20,7 @@ echo "How many files are in the current directory?"
 run=1
 while [[ $run -eq 1 ]]
 do
-    echo "Your guess:"
-    read guess
+    readinput
 
     if [[ $guess -lt $counter ]]
     then
@@ -28,9 +34,3 @@ do
 	let run=0
     fi
 done
-
-
-
-
-# while
-

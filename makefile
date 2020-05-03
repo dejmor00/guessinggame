@@ -1,4 +1,5 @@
 README.md: makefile
+	rm README.md
 	touch README.md
 	echo "# Guessing Game" >> README.md
 	echo -n "make was run on: " >> README.md
